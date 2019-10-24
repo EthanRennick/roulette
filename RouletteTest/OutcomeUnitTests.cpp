@@ -2,7 +2,7 @@
 #include "../Roulette/Outcome.h"
 #include "OutcomeUnitTests.h"
 
-TEST(DISABLED_Outcome, Equals) {
+TEST(Outcome, Equals) {
 	Outcome odd("Odd", 1);
 	Outcome anotherOdd("Odd", 1);
 
@@ -10,14 +10,14 @@ TEST(DISABLED_Outcome, Equals) {
 	ASSERT_TRUE(odd == anotherOdd);
 }
 
-TEST(DISABLED_Outcome, NotEquals) {
+TEST(Outcome, NotEquals) {
 	Outcome odd("Odd", 1);
 	Outcome even("Even", 1);
 
 	ASSERT_TRUE(odd != even);
 }
 
-TEST(DISABLED_Outcome, ToString) {
+TEST(Outcome, ToString) {
 	Outcome odd("Odd", 5);
 	
 	ASSERT_EQ("Odd (5:1)", odd.toString());
@@ -26,3 +26,18 @@ TEST(DISABLED_Outcome, ToString) {
 
 	ASSERT_EQ("Street 1-2-3 (11:1)", street.toString());
 }
+
+TEST(Outcome, Lessthan)
+{
+	Outcome a("A", 5);
+	Outcome b("B", 1);
+	Outcome c("C", 10);
+
+	ASSERT_TRUE(a < b);
+	ASSERT_TRUE(b < c);
+	ASSERT_FALSE(c < a);
+
+
+}
+
+

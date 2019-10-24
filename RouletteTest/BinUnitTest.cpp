@@ -2,7 +2,7 @@
 #include "../Roulette/Outcome.h"
 #include "../Roulette/Bin.h"
 
-TEST(DISABLED_Bin, Constructor) {
+TEST(Bin, Constructor) {
 
 	Outcome even("Even", 2);
 	Outcome street("Street 1-2-3", 11);
@@ -25,7 +25,7 @@ TEST(DISABLED_Bin, Constructor) {
 	EXPECT_EQ(1, secondBin.count(odd));
 }
 
-TEST(DISABLED_Bin, UniqueOutcomes) {
+TEST(Bin, UniqueOutcomes) {
 
 	Outcome even("Even", 2);
 	Outcome street("Street 1-2-3", 11);
