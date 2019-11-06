@@ -2,7 +2,7 @@
 #include "gtest/gtest.h"
 #include "../Roulette/BinBuilder.h"
 
-TEST(DISABLED_BinBuilder, StraightBets) {
+TEST(BinBuilder, StraightBets) {
 	BinBuilder binBuilder;
 	Wheel wheel;
 

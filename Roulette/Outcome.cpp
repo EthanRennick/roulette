@@ -26,11 +26,12 @@ bool Outcome::operator!=(const Outcome& rhs) const
 
 bool Outcome::operator<(const Outcome& rhs) const
 {
-	return (Outcome::odds < rhs.odds);
+	return (Outcome::name.compare(rhs.name) < 0);
 }
 
 string Outcome::toString() const
 {
+
 	//stringe = std::to_string( Outcome::name << Outcome::odds);
 	return string(Outcome::name + " (" +std::to_string( Outcome::odds) + ":1)");
 }
